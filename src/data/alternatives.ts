@@ -1,4 +1,4 @@
-// discordFeatures logic (as of February 12, 2026):
+// discordFeatures logic (as of February 13, 2026):
 // - true:  Feature is confirmed available and usable now (on official/main instances or generally).
 // - false: Feature is in development / planned / implemented but not launched yet (e.g., code exists but not enabled, servers not ready, or explicitly upcoming/wishlist).
 // - undefined / not listed: Feature is explicitly not available at all, no evidence of implementation or plans, or not applicable to the platform (e.g., no server-based custom roles in pure messengers).
@@ -40,7 +40,7 @@ export const alternatives: Alternative[] = [
 			'Popular open-source forum software that includes both traditional threads and real-time text chat.  It is used by over 22,000 communities, including many massive ones that contain multiple millions of users each.',
 		discordFeatures: {
 			textChannel: true,
-			voiceChannel: true,			
+			voiceChannel: true,
 			customEmojis: true,
 			customRoles: true,
 			permissions: true,
@@ -49,20 +49,20 @@ export const alternatives: Alternative[] = [
 			'Forum threads are updated in real-time, including typing notifications and displaying new posts -- no window refresh required',
 			'Also includes real-time text chat rooms similar to Discord chat rooms',
 			'Self-hostable for full decentralization and data control',
-			'Completely customizable themes',			
+			'Completely customizable themes',
 			'Responsive UI works on mobile and desktop',
 			'Many free integration plugins, including Mumble for voice chat, Patreon for backer reward tiers and Wordpress for blog comments',
 			'Premium plugins (SSO, Voting, etc) are included free if self-hosted',
 			'Detailed role-based access',
-			'Robust moderation tooling for community management'
+			'Robust moderation tooling for community management',
 		],
 		cons: [
 			'Not logged in guests may not realize there are real-time text chatrooms as they are hidden to guests',
 			'Configuration must be carefully reviewed to ensure it is as desired, since the default settings deters rapid posting or short threads',
-			'Voice chat is not natively provided, but through a community plugin that connects to Mumble',			
+			'Voice chat is not natively provided, but through a community plugin that connects to Mumble',
 			'If not self-hosting, paid hosting plans are expensive to access premium plugins ($20-$500)',
 			'Can take a while to load on older mobile phone browsers',
-			'Requires a large amount of server ram (2~4 GB)'			
+			'Requires a large amount of server ram (2~4 GB)',
 		],
 		popularity: 'popular',
 		mobileSupport: 'yes',
@@ -70,14 +70,13 @@ export const alternatives: Alternative[] = [
 			'There is a mobile app, but the software is typically used in a web browser by most users.',
 		nsfwPolicy: 'allowed',
 		nsfwNote:
-			'Self-hosted can be used however your hosting provider permits.  For officially hosted instances, consult Discourse\'s policies, though they appear to allow it.',
+			"Self-hosted can be used however your hosting provider permits.  For officially hosted instances, consult Discourse's policies, though they appear to allow it.",
 		faviconUrl: 'https://discourse.org/favicon.ico',
 		originFlag: '🇺🇸',
 		originLabel: 'US',
 		originNote:
 			'Project is US-based, but self-hosted instances can be anywhere with their own policies.',
-		warnings: [
-		],
+		warnings: [],
 		isBestBet: true,
 		bestBetReason:
 			'A forums experience that is open-source, self-hostable, and modern; it brings the real-time interactivity that Discord users expect to the forums paradigm.',
@@ -122,8 +121,9 @@ export const alternatives: Alternative[] = [
 		originNote:
 			'Project is Europe-based, but self-hosted instances can be anywhere with their own policies.',
 		warnings: [
-			'Self-hosted Stoat instances cannot seamlessly connect to the official hosted instance; federation is limited.',
-			'Media features like video require server preparation and scaling.',
+			"Limited federation: self-hosted instances don't connect seamlessly to official one.",
+			'Video/screen sharing needs significant server scaling.',
+			'App store clients have hardcoded backends → self-hosting requires forking/recompiling mobile apps to change server domains.',
 		],
 		isBestBet: false,
 		bestBetReason:
@@ -170,7 +170,7 @@ export const alternatives: Alternative[] = [
 		originNote:
 			'Company is US-based, so data and legal obligations typically follow US jurisdiction.',
 		warnings: [
-			'Even if the TOS promises limited data collection, any centralized platform can change policies over time.',
+			'Centralized platforms can alter policies over time despite current privacy promises.',
 		],
 	},
 	{
@@ -206,19 +206,18 @@ export const alternatives: Alternative[] = [
 		nsfwNote:
 			'NSFW tolerance depends on individual communities and admins; always read the specific server rules.',
 		faviconUrl: 'https://valour.gg/favicon.ico',
-		originFlag: '🇨🇦',
-		originLabel: 'CA',
-		originNote:
-			'Project appears to be developed by a small international team; hosting/legal jurisdiction may vary.',
+		originFlag: '🇺🇸',
+		originLabel: 'US',
+		originNote: 'Project and company appear US-based (Dallas, Texas).',
 		warnings: [
-			'Early-stage projects can change ownership, funding, or policies quickly; don’t rely on long-term guarantees.',
+			'Early-stage: prone to quick changes in ownership, funding, or policies — avoid for long-term reliance.',
 		],
 	},
 	{
 		name: 'Matrix',
 		url: 'https://matrix.org',
 		description:
-			'Federated open-source protocol for decentralized chat. Clients include Element, Cinny, and Commet.',
+			'Federated open-source protocol for decentralized chat. Clients include Element (most feature-complete), Commet (more Discord-like UI), Cinny, and others. Experience varies significantly by client.',
 		discordFeatures: {
 			textChannel: true,
 			voiceChannel: true,
@@ -253,7 +252,8 @@ export const alternatives: Alternative[] = [
 		originNote:
 			'Matrix is a protocol run by many independent homeservers, so "origin" matters less than the server you pick.',
 		warnings: [
-			'Even with end-to-end encryption, metadata (who talks to whom, when) can still be visible to homeservers.',
+			'E2EE hides content, but homeservers see metadata (who/when).',
+			'Client-dependent experience: Element most complete (but UI differs from Discord, screenshare lacks audio); Commet more Discord-like (single maintainer, worse screenshare framerates/no audio).',
 		],
 		isBestBet: true,
 		bestBetReason:
@@ -301,7 +301,7 @@ export const alternatives: Alternative[] = [
 		originNote:
 			'Originally developed in Germany; if you self-host, jurisdiction is that of your hosting location.',
 		warnings: [
-			'Images and some file transfers may still be proxied through TeamSpeak infrastructure, even when you run a private server.',
+			'Some file/image transfers may proxy through TeamSpeak infra even on private servers.',
 		],
 		isBestBet: true,
 		bestBetReason:
@@ -380,7 +380,7 @@ export const alternatives: Alternative[] = [
 		originNote:
 			'Origin and legal jurisdiction are not strongly advertised; assume small indie ownership.',
 		warnings: [
-			'Small indie platforms often rely on few maintainers; outages and policy changes can be sudden.',
+			'Small indie project: reliant on few maintainers → sudden outages or policy shifts possible.',
 		],
 	},
 	{
@@ -415,7 +415,7 @@ export const alternatives: Alternative[] = [
 		originNote:
 			'Project emphasizes EU-style privacy values; still, laws of your country/app store apply.',
 		warnings: [
-			'High privacy tools can still leak information if users misconfigure devices or backups.',
+			'Privacy strong, but device misconfigs, backups, or malware can still leak info.',
 		],
 	},
 	{
@@ -450,7 +450,135 @@ export const alternatives: Alternative[] = [
 		originNote:
 			'Project has Australian roots, but the network is globally distributed.',
 		warnings: [
-			'Even privacy-focused messengers can be affected by operating system telemetry, backups, or malware on the device.',
+			'Privacy-focused, but OS telemetry, backups, or device malware can compromise it.',
+		],
+	},
+	{
+		name: 'Jami',
+		url: 'https://jami.net',
+		description:
+			'Free and open-source peer-to-peer communication platform for calls, video, and messaging; fully distributed with no central servers required.',
+		discordFeatures: {
+			textChannel: true,
+			voiceChannel: true,
+			videoChannel: true,
+			screenSharing: true,
+			customEmojis: false,
+			customRoles: false,
+			permissions: false,
+		},
+		pros: [
+			'True peer-to-peer — no servers, maximum privacy and no metadata leaks to third parties',
+			'End-to-end encryption by default',
+			'No account or ID verification needed',
+			'Self-contained (no federation or hosting required)',
+			'Supports group calls and conferences',
+		],
+		cons: [
+			'Not designed for large persistent communities/servers like Discord',
+			'Discovery of new users/contacts can be harder (no central directory)',
+			'Smaller user base compared to mainstream apps',
+			'UI feels more like a classic VoIP/messenger than a server-based community hub',
+		],
+		popularity: 'less',
+		mobileSupport: 'yes',
+		mobileNote: 'Strong mobile apps available for iOS and Android.',
+		nsfwPolicy: 'allowed',
+		nsfwNote:
+			'As a P2P tool with no central platform, content is user-controlled; no platform-wide policy.',
+		faviconUrl: 'https://jami.net/favicon.ico',
+		originFlag: '🇨🇦',
+		originLabel: 'CA',
+		originNote: 'Led by Savoir-faire Linux in Montréal, Québec, Canada.',
+		warnings: [
+			'P2P requires direct connectivity; NAT/firewalls may block without helpers (DHT/STUN/TURN).',
+		],
+	},
+	{
+		name: 'Rocket.Chat',
+		url: 'https://rocket.chat',
+		description:
+			'Open-source team communication platform with channels, voice/video calls, and self-hosting support; can be configured for community use.',
+		discordFeatures: {
+			textChannel: true,
+			voiceChannel: true,
+			videoChannel: true,
+			screenSharing: true,
+			customEmojis: true,
+			customRoles: true,
+			permissions: true,
+		},
+		pros: [
+			'Fully self-hostable with strong admin controls',
+			'Supports channels, threads, integrations, and bots',
+			'End-to-end encryption available in some modes',
+			'Mobile and desktop apps available',
+			'Flexible for team or community setups',
+		],
+		cons: [
+			'UI more Slack-like than Discord-like by default',
+			'Setup can be complex for large-scale communities',
+			'Smaller casual/gaming community focus compared to Discord alternatives',
+		],
+		popularity: 'popular',
+		mobileSupport: 'yes',
+		mobileNote: 'Official mobile apps with good feature parity.',
+		nsfwPolicy: 'mixed',
+		nsfwNote:
+			'Depends on self-hosted or cloud instance rules; self-hosted gives full control.',
+		faviconUrl:
+			'https://cdn.prod.website-files.com/611a19b9853b7414a0f6b3f6/6132017c7a979557454a1bf2_favicon%2032px.png',
+		originFlag: '🇺🇸',
+		originLabel: 'US',
+		originNote:
+			'Headquartered in Wilmington, Delaware (US), though globally distributed team.',
+		warnings: [
+			'Cloud version centralized; self-host for full control (some features may tie to registration).',
+		],
+		isBestBet: true,
+		bestBetReason:
+			'Mature open-source self-hostable platform with solid voice/video and permission features.',
+	},
+	{
+		name: 'XMPP (Movim client)',
+		url: 'https://movim.eu',
+		description:
+			'Federated open protocol for chat/messaging; Movim provides a modern web-based social client with group chats, feeds, and more (similar to a federated social+chat hub).',
+		discordFeatures: {
+			textChannel: true,
+			voiceChannel: true, // Via extensions/Jingle
+			videoChannel: true, // Via extensions
+			screenSharing: false,
+			customEmojis: true, // Varies by client
+			customRoles: false,
+			permissions: true, // Server-dependent
+		},
+		pros: [
+			'Fully federated and decentralized (like email)',
+			'Many clients available (Movim for web/social feel, Conversations for mobile, etc.)',
+			'Self-hostable server (Prosody, ejabberd, etc.)',
+			'Strong privacy if using encrypted extensions (OMEMO)',
+			'No central company control',
+		],
+		cons: [
+			'Feature support varies greatly by client and server',
+			'Voice/video less polished than dedicated VoIP apps',
+			'Smaller modern community user base',
+			'Setup and federation can be technical',
+		],
+		popularity: 'less',
+		mobileSupport: 'yes',
+		mobileNote:
+			'Depends on client (e.g., Conversations on Android is excellent).',
+		nsfwPolicy: 'mixed',
+		nsfwNote: 'Entirely server/community-dependent; self-hosted gives control.',
+		faviconUrl: 'https://movim.eu/img/48.png',
+		originFlag: '🌍',
+		originLabel: 'Global / decentralized',
+		originNote:
+			'XMPP is a protocol; Movim developed by French contributors (Timothée Jaussoin).',
+		warnings: [
+			'Features vary heavily by client/server; not as uniform as centralized apps.',
 		],
 	},
 ];
