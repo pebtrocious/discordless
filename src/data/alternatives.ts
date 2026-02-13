@@ -34,6 +34,55 @@ export interface Alternative {
 
 export const alternatives: Alternative[] = [
 	{
+		name: 'Discourse',
+		url: 'https://github.com/discourse/discourse',
+		description:
+			'Popular open-source forum software that includes both traditional threads and real-time text chat.  It is used by over 22,000 communities, including many massive ones that contain multiple millions of users each.',
+		discordFeatures: {
+			textChannel: true,
+			voiceChannel: true,			
+			customEmojis: true,
+			customRoles: true,
+			permissions: true,
+		},
+		pros: [
+			'Forum threads are updated in real-time, including typing notifications and displaying new posts -- no window refresh required',
+			'Also includes real-time text chat rooms similar to Discord chat rooms',
+			'Self-hostable for full decentralization and data control',
+			'Completely customizable themes',			
+			'Responsive UI works on mobile and desktop',
+			'Many free integration plugins, including Mumble for voice chat, Patreon for backer reward tiers and Wordpress for blog comments',
+			'Premium plugins (SSO, Voting, etc) are included free if self-hosted',
+			'Detailed role-based access',
+			'Robust moderation tooling for community management'
+		],
+		cons: [
+			'Not logged in guests may not realize there are real-time text chatrooms as they are hidden to guests',
+			'Configuration must be carefully reviewed to ensure it is as desired, since the default settings deters rapid posting or short threads',
+			'Voice chat is not natively provided, but through a community plugin that connects to Mumble',			
+			'If not self-hosting, paid hosting plans are expensive to access premium plugins ($20-$500)',
+			'Can take a while to load on older mobile phone browsers',
+			'Requires a large amount of server ram (2~4 GB)'			
+		],
+		popularity: 'popular',
+		mobileSupport: 'yes',
+		mobileNote:
+			'There is a mobile app, but the software is typically used in a web browser by most users.',
+		nsfwPolicy: 'allowed',
+		nsfwNote:
+			'Self-hosted can be used however your hosting provider permits.  For officially hosted instances, consult Discourse\'s policies, though they appear to allow it.',
+		faviconUrl: 'https://discourse.org/favicon.ico',
+		originFlag: '🇺🇸',
+		originLabel: 'US',
+		originNote:
+			'Project is US-based, but self-hosted instances can be anywhere with their own policies.',
+		warnings: [
+		],
+		isBestBet: true,
+		bestBetReason:
+			'A forums experience that is open-source, self-hostable, and modern; it brings the real-time interactivity that Discord users expect to the forums paradigm.',
+	},
+	{
 		name: 'Stoat',
 		url: 'https://stoat.chat',
 		description:
