@@ -384,6 +384,44 @@ export const alternatives: Alternative[] = [
 		],
 	},
 	{
+		name: 'Sharkord',
+		url: 'https://sharkord.com/',
+		description:
+			'Lightweight, self-hosted, open-source chat server for small groups.',
+		discordFeatures: {
+			textChannel: true,
+			voiceChannel: true,
+			videoChannel: true,
+			screenSharing: true,
+			customEmojis: true,
+		},
+		pros: [
+			'Completely self-hostable, no central server',
+			'Low self-hosted server requirements',
+			'4K@60FPS video quality',
+			'No artifical feature or user count limits'
+		],
+		cons: [
+			'No app, web only',
+			'Currently early in development',
+		],
+		popularity: 'less',
+		mobileSupport: 'no',
+		mobileNote:
+			'Marked as \'not yet\', so potentially in future',
+		nsfwPolicy: 'allowed',
+		nsfwNote:
+			'Dependent on your host\'s/ISP acceptable use policy.',
+		faviconUrl: 'https://sharkord.com/favicon.ico',
+		originFlag: '🌍',
+		originLabel: 'Global',
+		originNote:
+			'',
+		warnings: [
+			'Due to bugs, was unable to successfully do a voice chat / screenshare test as of Feb 12, 2026.',
+		],
+	},
+	{
 		name: 'SimpleX Chat',
 		url: 'https://simplex.chat',
 		description:
