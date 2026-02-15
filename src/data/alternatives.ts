@@ -174,44 +174,47 @@ export const alternatives: Alternative[] = [
 		],
 	},
 	{
-		name: 'Valour',
-		url: 'https://valour.gg',
-		description:
-			'Open-source, community-first chat client with multi-window support and economy rewards; volunteer-built, privacy-focused.',
-		discordFeatures: {
-			textChannel: true,
-			voiceChannel: true,
-			customEmojis: true,
-			customRoles: true,
-			permissions: true,
-		},
-		pros: [
-			'Privacy-first — never sells data, transparent open-source code',
-			'No heavy ID checking',
-			'Community-driven with customizable themes',
-			'Low data collection',
-			'Multi-window channels for power users',
-		],
-		cons: [
-			'Alpha/ongoing stage — buggy/in development',
-			'Centralized hosting (no self-hosting)',
-			'Lacks full voice/screen sharing details or maturity',
-			'Smaller ecosystem',
-		],
-		popularity: 'popular',
-		mobileSupport: 'partial',
-		mobileNote:
+  name: 'Valour',
+  url: 'https://valour.gg',
+  description:
+    'Open-source, privacy-focused community chat app (client + server). You can try the Valour Alpha at app.valour.gg.',
+  discordFeatures: {
+    textChannel: true,
+    voiceChannel: true,
+    customEmojis: true,
+    customRoles: true,
+    permissions: true,
+    videoChannel: true,
+  },
+  pros: [
+    'Open-source client + server (AGPL)',
+    'Try the hosted Alpha instantly at app.valour.gg',
+    'Privacy policy explicitly states minimal collection and no ads/marketing emails',
+    'No third-party analytics like Google Analytics',
+    'Active development with frequent releases',
+  ],
+  cons: [
+    'Still Alpha: expect bugs, breaking changes, and missing polish',
+    'Self-hosting is possible but not “one-click”: requires running a server stack (Postgres + Redis + appsettings, etc.)',
+    'Some functionality relies on third parties (e.g., email delivery, optional error reporting, payments, push notifications, GIF search)',
+    'Smaller ecosystem/userbase than Discord (bots, integrations, community momentum)',
+  ],
+  popularity: 'popular',
+  mobileSupport: 'partial',
+  mobileNote:
 			'Mobile support is in progress; expect rough edges and missing features compared to desktop.',
-		nsfwPolicy: 'mixed',
-		nsfwNote:
-			'NSFW tolerance depends on individual communities and admins; always read the specific server rules.',
-		faviconUrl: 'https://valour.gg/favicon.ico',
-		originFlag: '🇺🇸',
-		originLabel: 'US',
-		originNote: 'Project and company appear US-based (Dallas, Texas).',
-		warnings: [
-			'Early-stage: prone to quick changes in ownership, funding, or policies — avoid for long-term reliance.',
-		],
+  nsfwPolicy: 'mixed',
+  nsfwNote:
+    'NSFW tolerance depends on individual communities and admins; always read the specific server rules.',
+  faviconUrl: 'https://valour.gg/favicon.ico',
+  originFlag: '',
+  originLabel: 'US',
+  originNote:
+    'Operated by Valour Software LLC; privacy policy states servers/providers are US-based and data may be processed in the US.',
+  warnings: [
+    'Privacy policy notes DOB is collected for 13+ age verification and IP is logged for security/media uploads.',
+    'Third parties listed include SendGrid (transactional email), Sentry (opt-in), PayPal (payments), Firebase (push on Android), Tenor (GIF search).',
+  ],
 	},
 	{
 		name: 'Matrix',
