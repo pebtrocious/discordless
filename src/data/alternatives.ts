@@ -581,4 +581,43 @@ export const alternatives: Alternative[] = [
 			'Features vary heavily by client/server; not as uniform as centralized apps.',
 		],
 	},
+	{
+		name: 'Mumble',
+		url: 'https://www.mumble.info/',
+		description:
+			'Decentralized, open-source VoIP client/server -- trusted for two decades.',
+		discordFeatures: {
+			textChannel: true,
+			voiceChannel: true,
+			customRoles: true,
+			permissions: true,
+		},
+		pros: [
+			'Excellent voice quality, even higher than Discord',
+			'Great background noise suppression via the RNNoise option',
+			'Completely decentralized, no upstream censorship possible',
+			'Accountless, uses automatically managed security certificates instead',
+			'Set up private rooms or other role based access controls',
+			'Can display current status / user list on your own web page via the API',
+			'Join one of hundreds of servers already online globally, or host your own!',				
+		],
+		cons: [
+			'Some documentation no longer online and must find it on way back machine archives',
+			'Text channels are strictly for simple real-time text and small image sharing -- they do not persist over time',
+			'No screenshare -- Mumble users typically achieve this via completely separate apps like Jitsi or Nextcloud to handle screen share',						
+		],
+		popularity: 'popular',
+		mobileSupport: 'partial',
+		mobileNote:
+			'Has unofficial mobile apps with limited feature set and less updates.',
+		nsfwPolicy: 'mixed',
+		nsfwNote:
+			'NSFW policy depends on each server owner.',
+		faviconUrl:
+			'https://www.mumble.info/favicon.ico',
+		originFlag: '🌍',
+		originLabel: 'Global / decentralized',
+		originNote:
+			'Open source.'	
+	},
 ];
