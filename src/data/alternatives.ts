@@ -174,6 +174,47 @@ export const alternatives: Alternative[] = [
 		],
 	},
 	{
+		name: 'Fluxer',
+		url: 'https://fluxer.app',
+		description:
+			'Open-source, Discord-style chat and VoIP platform with a focus on control and privacy; public beta with strong feature parity goals.',
+		discordFeatures: {
+			textChannel: true,
+			voiceChannel: true,
+			videoChannel: true,
+			screenSharing: true,
+			customEmojis: true,
+			customRoles: true,
+			permissions: true,
+		},
+		pros: [
+			'Familiar channel-based interface',
+			'Open-source (AGPLv3), self-hostable',
+			'Granular moderation, custom CSS, media saving',
+			'Multi-device voice join, upcoming federation/E2EE',
+		],
+		cons: [
+			'Budding user base',
+			'Ecosystem and documentation are still limited / in beta',
+			'Native mobile apps coming soon (not fully available yet)',
+		],
+		popularity: 'popular',
+		mobileSupport: 'partial',
+		mobileNote:
+			'Mobile support coming soon, installable as PWA; expect rough edges.',
+		nsfwPolicy: 'allowed',
+		nsfwNote:
+			'NSFW is allowed in the official instance in clearly defined +18 spaces; self-hosting instances dependent on hosting location and terms',
+		faviconUrl: 'https://fluxerstatic.com/web/favicon.ico',
+		originFlag: '🇸🇪',
+		originLabel: 'SE',
+		originNote:
+			'Project and company are Sweden-based. (company name Fluxer Platform AB)',
+		warnings: [
+			'Indie platforms can shut down quickly or pivot; avoid depending on them for critical communities.',
+		],
+	},
+	{
 		name: 'Valour',
 		url: 'https://valour.gg',
 		description:
@@ -307,47 +348,7 @@ export const alternatives: Alternative[] = [
 		bestBetReason:
 			'Self-hostable high-quality voice servers; secure and customizable; low central oversight on private setups.',
 	},
-	{
-		name: 'Fluxer',
-		url: 'https://fluxer.app',
-		description:
-			'Open-source, Discord-style chat and VoIP platform with a focus on control and privacy; public beta with strong feature parity goals.',
-		discordFeatures: {
-			textChannel: true,
-			voiceChannel: true,
-			videoChannel: true,
-			screenSharing: true,
-			customEmojis: true,
-			customRoles: true,
-			permissions: true,
-		},
-		pros: [
-			'Familiar channel-based interface',
-			'Open-source (AGPLv3), self-hostable',
-			'Granular moderation, custom CSS, media saving',
-			'Multi-device voice join, upcoming federation/E2EE',
-		],
-		cons: [
-			'Very small user base',
-			'Ecosystem and documentation are still limited / in beta',
-			'Mobile apps coming soon (not fully available yet)',
-		],
-		popularity: 'less',
-		mobileSupport: 'partial',
-		mobileNote:
-			'Mobile support and client quality are still unclear / coming soon; expect rough edges.',
-		nsfwPolicy: 'unknown',
-		nsfwNote:
-			'NSFW policy not clearly communicated; always read the current TOS and community rules.',
-		faviconUrl: 'https://fluxerstatic.com/web/favicon.ico',
-		originFlag: '🇸🇪',
-		originLabel: 'SE',
-		originNote:
-			'Smaller indie projects may not clearly state legal jurisdiction; treat them as experimental.',
-		warnings: [
-			'Indie platforms can shut down quickly or pivot; avoid depending on them for critical communities.',
-		],
-	},
+
 	{
 		name: 'Nerimity',
 		url: 'https://nerimity.com',
