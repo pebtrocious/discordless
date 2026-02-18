@@ -196,7 +196,7 @@ export const alternatives: Alternative[] = [
 		],
 		cons: [
 			'Still Alpha: expect bugs, breaking changes, and missing polish',
-			'Self-hosting is possible but not “one-click”: requires running a server stack (Postgres + Redis + appsettings, etc.)',
+			'Self-hosting is possible but not "one-click": requires running a server stack (Postgres + Redis + appsettings, etc.)',
 			'Some functionality relies on third parties (e.g., email delivery, optional error reporting, payments, push notifications, GIF search)',
 			'Smaller ecosystem/userbase than Discord (bots, integrations, community momentum)',
 		],
@@ -652,5 +652,46 @@ export const alternatives: Alternative[] = [
 		originFlag: '🌍',
 		originLabel: 'Global / decentralized',
 		originNote: 'Open source.',
+	},
+	{
+		name: 'Haven',
+		url: 'https://github.com/ancsemi/Haven',
+		description:
+			'Self-hosted chat app built on Node.js and SQLite. Run it on your machine, invite people with a code. No cloud, no email signup, no tracking.',
+		discordFeatures: {
+			textChannel: true,
+			voiceChannel: true,
+			screenSharing: true,
+			customEmojis: true,
+			customRoles: true,
+			permissions: true,
+		},
+		pros: [
+			'Dead simple setup -- one command on Windows, Linux, or macOS',
+			'Lightweight (Node.js + SQLite, no Postgres/Redis/Docker required)',
+			'E2E encrypted DMs (ECDH + AES-256-GCM, keys never leave the browser)',
+			'25+ themes with stackable visual effects',
+			'Peer-to-peer voice chat and multi-stream screen sharing',
+			'No third-party accounts or services needed -- fully self-contained',
+		],
+		cons: [
+			'No native mobile app (works in mobile browsers but not ideal)',
+			'Smaller project, mostly one dev',
+			'No federation -- each server is its own island',
+			'Voice/screen share quality depends on your network since it\'s peer-to-peer',
+		],
+		popularity: 'less',
+		mobileSupport: 'partial',
+		mobileNote:
+			'Works in mobile browsers but there is no dedicated app.',
+		nsfwPolicy: 'allowed',
+		nsfwNote:
+			'You host it, your rules.',
+		originFlag: '🇺🇸',
+		originLabel: 'US',
+		originNote: 'Indie project, open source (MIT-NC).',
+		warnings: [
+			'Self-signed HTTPS cert by default -- browsers will show a warning on first visit.',
+		],
 	},
 ];
