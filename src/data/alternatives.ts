@@ -341,6 +341,7 @@ export const alternatives: Alternative[] = [
 			'Limited modern text features',
 			'Centralization on official servers',
 			'File and image handling feels clunky compared to modern chat apps',
+			'Mobile app is paid',
 		],
 		popularity: 'popular',
 		mobileSupport: 'yes',
@@ -381,6 +382,7 @@ export const alternatives: Alternative[] = [
 			'Open-source (AGPLv3), self-hostable',
 			'Granular moderation, custom CSS, media saving',
 			'Multi-device voice join, upcoming federation/E2EE',
+			'Support for bots and API integrations which work similar to Discord\'s',
 		],
 		cons: [
 			'Budding user base',
