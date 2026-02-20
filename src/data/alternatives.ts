@@ -381,7 +381,7 @@ export const alternatives: Alternative[] = [
 			'Open-source (AGPLv3), self-hostable',
 			'Granular moderation, custom CSS, media saving',
 			'Multi-device voice join, upcoming federation/E2EE',
-			'Support for bots and API integrations which work similar to Discord\'s',
+			"Support for bots and API integrations which work similar to Discord's",
 		],
 		cons: [
 			'Budding user base',
@@ -411,6 +411,9 @@ export const alternatives: Alternative[] = [
 			'Indie community chat platform aiming to feel familiar to Discord users while staying simple.',
 		discordFeatures: {
 			textChannel: true,
+			voiceChannel: true, // every text channel can start a call
+			videoChannel: true,
+			screenSharing: true,
 			customEmojis: true,
 			customRoles: true,
 			permissions: true,
@@ -418,18 +421,21 @@ export const alternatives: Alternative[] = [
 		pros: [
 			'Lightweight and relatively minimal UI',
 			'Focused, small-scale community feel',
+			'Voice calls are available on every channel with video and screen share support',
+			'Android app exists and web PWA works well on mobile',
 		],
 		cons: [
 			'Limited integrations and ecosystem compared to bigger platforms',
 			'Small team means slower development and support',
+			'No iOS app due to Apple developer fee; mobile notifications on PWA do not work',
 		],
 		popularity: 'less',
 		mobileSupport: 'partial',
 		mobileNote:
-			'Mobile support exists but may lag desktop in polish and features.',
-		nsfwPolicy: 'mixed',
+			'Android app available; iOS will never be offered (Apple developer fee). Website functions as a PWA on phones but notifications are broken.',
+		nsfwPolicy: 'forbidden',
 		nsfwNote:
-			"NSFW handling is likely community/server-specific; check each server's rules and platform-wide TOS.",
+			'NSFW content is banned platform-wide and numerous warnings are shown to users.',
 		faviconUrl: 'https://nerimity.com/favicon.ico',
 		originFlag: '❓',
 		originLabel: 'Indie / unclear',
@@ -437,6 +443,7 @@ export const alternatives: Alternative[] = [
 			'Origin and legal jurisdiction are not strongly advertised; assume small indie ownership.',
 		warnings: [
 			'Small indie project: reliant on few maintainers → sudden outages or policy shifts possible.',
+			'Strict platform-wide ban on NSFW content—multiple warning notices appear.',
 		],
 	},
 	{
