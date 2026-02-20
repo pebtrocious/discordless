@@ -306,7 +306,6 @@ export const alternatives: Alternative[] = [
 		originNote:
 			'Matrix is a protocol run by many independent homeservers, so "origin" matters less than the server you pick.',
 		warnings: [
-			'Matrix.org has questionable past more info here: https://hackea.org/notas/matrix.html',
 			'E2EE hides content, but homeservers see metadata (who/when).',
 			'Client-dependent experience: Element most complete (but UI differs from Discord, screenshare lacks audio); Commet more Discord-like (single maintainer, worse screenshare framerates/no audio).',
 		],
