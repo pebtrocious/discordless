@@ -616,6 +616,7 @@ export const alternatives: Alternative[] = [
 			'Flexible for team or community setups',
 		],
 		cons: [
+			'Some features like custom roles are paywalled',
 			'UI more Slack-like than Discord-like by default',
 			'Setup can be complex for large-scale communities',
 			'Smaller casual/gaming community focus compared to Discord alternatives',
