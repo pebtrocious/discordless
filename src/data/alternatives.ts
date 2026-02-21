@@ -233,6 +233,7 @@ export const alternatives: Alternative[] = [
 			textChannel: true,
 			voiceChannel: true,
 			customEmojis: true,
+			screenSharing: false,
 			customRoles: true,
 			permissions: true,
 			videoChannel: true,
@@ -245,6 +246,7 @@ export const alternatives: Alternative[] = [
 			'Active development with frequent releases',
 		],
 		cons: [
+			'Valour team is working hard to ship more features now, so expect their listing to change often',
 			'Still Alpha: expect bugs, breaking changes, and missing polish',
 			'Self-hosting is possible but not “one-click”: requires running a server stack (Postgres + Redis + appsettings, etc.)',
 			'Some functionality relies on third parties (e.g., email delivery, optional error reporting, payments, push notifications, GIF search)',
