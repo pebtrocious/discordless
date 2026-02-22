@@ -260,7 +260,7 @@ export const alternatives: Alternative[] = [
 		nsfwNote:
 			'NSFW tolerance depends on individual communities and admins; always read the specific server rules.',
 		faviconUrl: 'https://valour.gg/favicon.ico',
-		originFlag: '',
+		originFlag: '🇺🇸',
 		originLabel: 'US',
 		originNote:
 			'Operated by Valour Software LLC; privacy policy states servers/providers are US-based and data may be processed in the US.',
@@ -444,10 +444,10 @@ export const alternatives: Alternative[] = [
 		nsfwNote:
 			'NSFW content is banned platform-wide and numerous warnings are shown to users.',
 		faviconUrl: 'https://nerimity.com/favicon.ico',
-		originFlag: '❓',
-		originLabel: 'Indie / unclear',
+		originFlag: '🇬🇧',
+		originLabel: 'GB',
 		originNote:
-			'Origin and legal jurisdiction are not strongly advertised; assume small indie ownership.',
+			'An indie project, privacy policy mentions abidance by GB law.',
 		warnings: [
 			'Small indie project: reliant on few maintainers → sudden outages or policy shifts possible.',
 			'Strict platform-wide ban on NSFW content—multiple warning notices appear.',
