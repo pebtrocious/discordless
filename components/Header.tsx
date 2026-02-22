@@ -7,6 +7,7 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from './ui/dropdown-menu';
+import Link from 'next/link';
 
 const navigationData = [
 	{
@@ -28,20 +29,20 @@ export default function Header() {
 		<header className='bg-background sticky top-0 z-50'>
 			<div className='mx-auto flex max-w-7xl items-center justify-between gap-8 px-4 py-7 sm:px-6'>
 				<div className='text-muted-foreground flex flex-1 items-center gap-8 font-medium md:justify-center lg:gap-16'>
-					<a
+					<Link
 						href='/'
 						className='text-foreground flex items-center text-xl font-semibold'
 					>
 						discordless
-					</a>
+					</Link>
 					{navigationData.map((item, index) => (
-						<a
+						<Link
 							key={index}
 							href={item.href}
 							className='hover:text-primary max-md:hidden'
 						>
 							{item.title}
-						</a>
+						</Link>
 					))}
 				</div>
 
@@ -66,7 +67,7 @@ export default function Header() {
 							<DropdownMenuGroup>
 								{navigationData.map((item, index) => (
 									<DropdownMenuItem key={index}>
-										<a href={item.href}>{item.title}</a>
+										<Link href={item.href}>{item.title}</Link>
 									</DropdownMenuItem>
 								))}
 							</DropdownMenuGroup>

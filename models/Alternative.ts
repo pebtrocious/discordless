@@ -1,5 +1,3 @@
-// models/Alternative.ts
-
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
 // ────────────────────────────────────────────────
@@ -301,5 +299,5 @@ AlternativeSchema.index({ name: 1 }, { unique: true });
 const Alternative =
 	(mongoose.models.Alternative as Model<IAlternative>) ||
 	mongoose.model<IAlternative>('Alternative', AlternativeSchema);
-
+export { AlternativeDataSchema };
 export default Alternative;

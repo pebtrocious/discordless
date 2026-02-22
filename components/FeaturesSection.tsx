@@ -1,5 +1,3 @@
-import type { ComponentType } from 'react';
-
 import { ArrowRightIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
@@ -65,7 +63,7 @@ const featuresList = [
 			'border-rose-600/40 hover:border-rose-600 dark:border-rose-400/40 dark:hover:border-rose-400',
 	},
 	{
-		title: 'Available apps',
+		title: 'Available platforms',
 		description:
 			'Official or well-maintained clients for web browsers, Windows, macOS, Linux, iOS, and Android so you can use it everywhere.',
 		cardBorderColor:

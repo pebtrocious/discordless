@@ -7,11 +7,11 @@ export default function Hero() {
 		<section className='flex min-h-[calc(10dvh-4rem)] flex-1 flex-col justify-between gap-12 overflow-x-hidden pt-8 sm:gap-16 sm:pt-16 lg:gap-24 lg:pt-24'>
 			<div className='mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:px-8'>
 				<h1 className='text-3xl leading-[1.29167] font-bold text-balance sm:text-4xl lg:text-5xl'>
-					Wanna ditch Discord?
+					Time to ditch Discord,
 					<br />
-					Here is the list of{' '}
+					go{' '}
 					<span className='relative'>
-						alternatives
+						discordless
 						<svg
 							width='223'
 							height='12'

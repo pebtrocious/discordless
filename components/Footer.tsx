@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
 	return (
 		<footer className='bg-background border-t border-border mt-auto'>
@@ -7,23 +9,23 @@ export default function Footer() {
 					stored or linked. It uses strictly necessary cookies solely to prevent
 					spam and multiple submissions. Cloudflare Turnstile helps block bots
 					by processing minimal device signals for security only. See{' '}
-					<a
+					<Link
 						href='https://www.cloudflare.com/turnstile-privacy-policy/'
 						target='_blank'
 						rel='noopener noreferrer'
 						className='text-foreground hover:text-primary underline underline-offset-4 transition-colors'
 					>
 						Cloudflare Turnstile privacy details
-					</a>
+					</Link>
 					. No analytics, ads, or data sharing occurs.
 				</div>
 
-				<a
+				<Link
 					href='/'
 					className='text-foreground font-semibold hover:text-primary transition-colors'
 				>
 					discordless
-				</a>
+				</Link>
 			</div>
 		</footer>
 	);
