@@ -16,6 +16,7 @@ Originally built as a front‑end using **Next.js 16 (App Router)** and **TypeSc
     - [x] /why
   - [x] Add opengraph and twitter meta tags
   - [x] Security audit before deploy
+  - [] update README.md with proper instructions
 
 ---
 
