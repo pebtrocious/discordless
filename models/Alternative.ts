@@ -104,6 +104,7 @@ export interface IAlternative extends Document {
 // ────────────────────────────────────────────────
 
 export type AlternativeLean = {
+	_id: mongoose.Types.ObjectId;
 	name: string;
 	description: string;
 	image: string;

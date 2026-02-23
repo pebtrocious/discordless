@@ -44,10 +44,12 @@ const countDiscordFeatures = (discord: IDiscordData) =>
 
 interface AlternativesClientProps {
 	alternatives: AlternativeLean[];
+	ratedMap: Map<string, boolean>;
 }
 
 export default function AlternativesClient({
 	alternatives,
+	ratedMap,
 }: AlternativesClientProps) {
 	const [selected, setSelected] = useState<AlternativeLean | null>(null);
 	const [searchTerm, setSearchTerm] = useState('');
@@ -55,7 +57,7 @@ export default function AlternativesClient({
 		'rating' | 'users' | 'features' | 'name' | 'updated'
 	>('rating');
 	const [minRating, setMinRating] = useState(0);
-	const [minUsers, setMinUsers] = useState('10000');
+	const [minUsers, setMinUsers] = useState('5000');
 	const [openSourceOnly, setOpenSourceOnly] = useState(false);
 	const [decentralizedOnly, setDecentralizedOnly] = useState(false);
 	const [e2eeOnly, setE2eeOnly] = useState(false);
@@ -212,7 +214,7 @@ export default function AlternativesClient({
 							</SheetTrigger>
 							<SheetContent
 								side='left'
-								className='w-80 p-8'
+								className='w-80 p-8 overflow-auto'
 							>
 								<SheetHeader>
 									<SheetTitle>Filters</SheetTitle>
@@ -261,6 +263,7 @@ export default function AlternativesClient({
 							{selected && (
 								<AlternativeDetail
 									alternative={selected}
+									isRated={ratedMap.get(selected._id.toString())}
 									onClose={() => setSelected(null)}
 								/>
 							)}

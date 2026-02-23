@@ -27,7 +27,9 @@ export default function AlternativeCard({
 				<Image
 					src={alt.image}
 					alt={alt.name}
-					className='w-32 h-32 sm:w-12 sm:h-12 rounded-xl object-cover border border-border'
+					width={250}
+					height={250}
+					className='w-28 h-28 sm:w-12 sm:h-12 rounded-xl object-cover border border-border'
 				/>
 				<h3 className='mt-3 text-sm font-medium tracking-tight truncate w-full leading-tight'>
 					{alt.name}

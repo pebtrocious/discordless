@@ -23,11 +23,14 @@ import {
 	HelpCircle,
 	Info,
 } from 'lucide-react';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 
+import RatingCard from '@/components/RatingCard';
 import type { AlternativeLean } from '@/models/Alternative';
 
 interface AlternativeDetailProps {
 	alternative: AlternativeLean;
+	isRated: boolean | undefined;
 	onClose: () => void;
 }
 
@@ -128,9 +131,11 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 export default function AlternativeDetail({
 	alternative,
+	isRated,
 	onClose,
 }: AlternativeDetailProps) {
 	const { data } = alternative;
+	const [showRating, setShowRating] = useState(false);
 
 	const availableApps = Object.entries(data.apps)
 		.filter(([, v]) => v.status === 'available')
@@ -261,6 +266,22 @@ export default function AlternativeDetail({
 								</TagTooltip>
 							))}
 						</div>
+						{!isRated && (
+							<div className='flex flex-wrap justify-center gap-1.5'>
+								<Button
+									size='sm'
+									className='h-8 text-xs rounded-lg font-normal'
+									onClick={() => setShowRating(true)}
+								>
+									Rate this app
+								</Button>
+							</div>
+						)}
+						{isRated && (
+							<p className='text-xs text-muted-foreground'>
+								You've already rated this.
+							</p>
+						)}
 					</div>
 
 					<Separator />
@@ -425,6 +446,20 @@ export default function AlternativeDetail({
 					</p>
 				</div>
 			</div>
+
+			{/* Rating Card Dialog */}
+			<Dialog
+				open={showRating}
+				onOpenChange={setShowRating}
+			>
+				<DialogContent className='sm:max-w-md'>
+					<DialogTitle>Rate {alternative.name}</DialogTitle>
+					<RatingCard
+						alternativeId={alternative._id.toString()}
+						onSuccess={() => setShowRating(false)}
+					/>
+				</DialogContent>
+			</Dialog>
 		</TooltipProvider>
 	);
 }

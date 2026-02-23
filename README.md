@@ -6,16 +6,16 @@ Originally built as a front‑end using **Next.js 16 (App Router)** and **TypeSc
 
 ---
 ## TODO list
-  - [ ] DB schemas
+  - [x] DB schemas
     - [x] Alternative
-    - [ ] Request
-  - [ ] Pages
+    - [x] Request
+  - [x] Pages
     - [x] / (Home page)
-    - [ ] /alternatives
-    - [ ] /request
-    - [ ] /why
-  - [ ] Add schema and twitter meta tags
-  - [ ] Security audit before deploy
+    - [x] /alternatives
+    - [x] /request
+    - [x] /why
+  - [x] Add opengraph and twitter meta tags
+  - [x] Security audit before deploy
 
 ---
 
