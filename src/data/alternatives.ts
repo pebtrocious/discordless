@@ -179,6 +179,60 @@ export const alternatives: Alternative[] = [
 		bestBetReason:
 			'Open-source and self-hostable Discord-style experience; privacy-focused; no central control if self-hosted; transparent code/TOS.',
 	},
+    {
+		name: 'Pulse',
+		url: 'https://plse.chat',
+		description:
+			'Open-source, self-hostable Discord alternative with end-to-end encryption via the Signal Protocol. Supports text, voice, video, screen sharing, forum channels, and federation between instances. Currently in alpha.',
+		discordFeatures: {
+			textChannel: true,
+			voiceChannel: true,
+			videoChannel: true,
+			screenSharing: true,
+			customEmojis: true,
+			customRoles: true,
+			permissions: true,
+		},
+		pros: [
+			'End-to-end encryption using the Signal Protocol (Double Ratchet + X3DH key exchange) for DMs and channels',
+			'Federation between self-hosted instances — users on different servers can interact across instances',
+			'Full voice, video, and screen sharing via Mediasoup WebRTC',
+			'Forum channels with tags and threads, in addition to standard text and voice channels',
+			'Granular permission system with role-level, channel-level, and user-specific overrides',
+			'Self-hostable with Docker or bare metal for full data sovereignty',
+			'Built-in automod with keyword, regex, mention limit, and link filtering rules',
+			'Webhooks, DMs (including group DMs), friends system, message search, and custom emojis',
+			'Registration can be restricted to invite-only per instance',
+			'Multiple OAuth providers supported (Google, Discord, Facebook, Twitch) alongside email/password',
+		],
+		cons: [
+			'Alpha software (v0.1.3) — expect bugs and breaking changes between updates',
+			'No dedicated mobile or desktop app yet; accessed entirely through a web browser',
+			'Smaller community and ecosystem compared to established alternatives',
+			'Requires Supabase (self-hosted or cloud) for authentication, adding deployment complexity',
+			'Federation is functional but still maturing',
+		],
+		popularity: 'niche',
+		mobileSupport: 'partial',
+		mobileNote:
+			'No native mobile or desktop app. The web client is responsive and usable on mobile browsers. A desktop app is in development.',
+		nsfwPolicy: 'allowed',
+		nsfwNote:
+			'Self-hosted instances have no content restrictions beyond what the instance operator configures. There is no centrally enforced content policy.',
+		faviconUrl: 'https://raw.githubusercontent.com/plsechat/pulse-chat/main/apps/client/public/favicon.ico',
+		originFlag: '🌐',
+		originLabel: 'Global',
+		originNote:
+			'Open-source project; self-hosted instances can be operated anywhere under the operator\'s own policies.',
+		warnings: [
+			'Alpha software — data migrations between versions may require manual steps.',
+			'Federation is opt-in and still evolving; cross-instance features may have rough edges.',
+			'E2EE key backup and recovery should be set up to avoid losing access to encrypted messages.',
+		],
+		isBestBet: false,
+		bestBetReason:
+			'The only open-source Discord alternative offering Signal Protocol E2EE, federation, and full voice/video/screen sharing in a single self-hostable package.',
+    },
 	{
 		name: 'Root',
 		url: 'https://rootapp.com',
