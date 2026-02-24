@@ -254,7 +254,7 @@ function PodiumItem({
 						variant='secondary'
 						className={isLarge ? 'text-sm px-3 py-1' : 'text-xs'}
 					>
-						★ {item.data.users.rating}
+						★ {item.data.users.rating.toFixed(1)}
 					</Badge>
 					<Badge
 						variant='secondary'
