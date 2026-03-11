@@ -128,7 +128,7 @@ export default function AlternativesFilters({
 	};
 
 	const formattedUsers = minUsers
-		? parseInt(minUsers).toLocaleString()
+		? parseInt(minUsers).toLocaleString({useGrouping: true})
 		: '10,000';
 
 	return (
