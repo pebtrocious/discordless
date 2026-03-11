@@ -239,7 +239,7 @@ export default function AlternativeDetail({
 							<div className='flex items-center gap-1.5'>
 								<Users className='h-3 w-3' />
 								<span className='font-mono text-xs'>
-									{data.users.amount.toLocaleString()}
+									{data.users.amount.toLocaleString({useGrouping: true})}
 								</span>
 							</div>
 							<div className='flex items-center gap-1.5'>

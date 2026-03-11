@@ -44,7 +44,7 @@ export default function AlternativeCard({
 					<div className='flex items-center gap-1 text-muted-foreground'>
 						<Users className='h-3 w-3' />
 						<span className='text-xs font-mono tabular-nums'>
-							{alt.data.users.amount.toLocaleString()}
+							{alt.data.users.amount.toLocaleString({useGrouping: true})}
 						</span>
 					</div>
 				</div>
